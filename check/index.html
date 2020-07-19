@@ -1,0 +1,938 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Check UP Covid-19</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="https://ppc-19.pekanbaru.go.id/theme/site.webmanifest"> -->
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="https://ppc-19.pekanbaru.go.id/theme/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://ppc-19.pekanbaru.go.id/theme/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://ppc-19.pekanbaru.go.id/theme/css/magnific-popup.css">
+    <link rel="stylesheet" href="https://ppc-19.pekanbaru.go.id/theme/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://ppc-19.pekanbaru.go.id/theme/css/themify-icons.css">
+    <link rel="stylesheet" href="https://ppc-19.pekanbaru.go.id/theme/css/nice-select.css">
+    <link rel="stylesheet" href="https://ppc-19.pekanbaru.go.id/theme/css/flaticon.css">
+    <link rel="stylesheet" href="https://ppc-19.pekanbaru.go.id/theme/css/gijgo.css">
+    <link rel="stylesheet" href="https://ppc-19.pekanbaru.go.id/theme/css/animate.min.css">
+    <link rel="stylesheet" href="https://ppc-19.pekanbaru.go.id/theme/css/slick.css">
+    <link rel="stylesheet" href="https://ppc-19.pekanbaru.go.id/theme/css/slicknav.css">
+    <link rel="stylesheet" href="https://ppc-19.pekanbaru.go.id/theme/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://ppc-19.pekanbaru.go.id/theme/css/responsive.css"> -->
+    <style type="text/css">
+    #map {
+        width: 100%;
+        height: 800px;
+    }
+
+    #home {
+        width: 100%;
+        height: 1950px;
+    }
+
+    @media screen and (max-width: 600px) {
+        #home {
+            width: 100%;
+            height: 1000px;
+        }
+
+        #map {
+            width: 100%;
+            height: 900px;
+        }
+    }
+
+    /* On screens that are 992px or less, set the background color to blue */
+    @media screen and (max-width: 992px) {
+        #map {
+            width: 100%;
+            height: 900px;
+        }
+
+        #home {
+            width: 100%;
+            height: 1000px;
+        }
+    }
+
+    /* On screens that are 600px or less, set the background color to olive */
+    /* @media screen and (max-width: 600px) {
+        body {
+            background-color: olive;
+        }
+    } */
+    </style>
+</head>
+
+<body oncontextmenu="return false">
+    <link rel="stylesheet" href="https://ppc-19.pekanbaru.go.id/lib/L.Control.Zoomslider.css" />
+    <link rel="stylesheet" href="https://ppc-19.pekanbaru.go.id/lib/leaflet.css" />
+    <link rel="stylesheet" href="https://ppc-19.pekanbaru.go.id/lib/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://ppc-19.pekanbaru.go.id/lib/MarkerCluster.Default.css" />
+    <script src="https://ppc-19.pekanbaru.go.id/lib/leaflet.js"></script>
+    <script src="https://ppc-19.pekanbaru.go.id/lib/leaflet.markercluster-src.js"></script>
+    <script src="https://ppc-19.pekanbaru.go.id/lib/L.Control.Zoomslider.js"></script>
+    <script src="https://ppc-19.pekanbaru.go.id/lib/L.TileLayer.Multi.js"></script>
+    <script src="https://ppc-19.pekanbaru.go.id/lib/functionbutton.js"></script>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://ppc-19.pekanbaru.go.id/theme/https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <div class="shap_big_2 d-none d-lg-block">
+        <img src="https://ppc-19.pekanbaru.go.id/theme/img/ilstrator/bg2.png" alt="">
+    </div>
+    <!-- slider_area_start -->
+    <div class="slider_area">
+        <div class="shap_img_1 d-none d-lg-block">
+            <img src="https://ppc-19.pekanbaru.go.id/theme/img/ilstrator/bg_1.svg" alt="">
+        </div>
+        <div class="poly_img">
+            <img src="https://ppc-19.pekanbaru.go.id/theme/img/ilstrator/poly.png" alt="">
+        </div>
+        <div class="single_slider  d-flex align-items-center slider_bg_1">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-10 offset-xl-1">
+                        <div class="slider_text text-center">
+                            <div class="text">
+                                <h3>
+                                    Aplikasi untuk mengetahui kondisi Kesehatan Anda
+                                </h3>
+                                <a class="boxed-btn3" href="#mulai_cek">Cek Kondisi Anda Sekarang</a>
+                            </div>
+                            <div class="ilstrator_thumb">
+                                <img src="https://ppc-19.pekanbaru.go.id/theme/img/ilstrator/illustration2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- slider_area_end -->
+    <!-- service_area  -->
+    <div class="service_area" id="mulai_cek">
+        <div class="container">
+            <div class="row" id="judul_awal">
+                <div class="col-xl-12">
+                    <div class="section_title text-center">
+                        <h3>Dalam 14 hari terakhir, apakah Anda:</h3>
+                        <p>Silahkan pilih sesuai dengan kondisi anda sekarang, diharapkan jujur dalam menjawab</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-12 col-md-12" id="soalA">
+                    <div class="single_service text-center">
+                        <div class="icon">
+                            <img src="https://ppc-19.pekanbaru.go.id/theme/img/svg_icon/a.svg" alt="">
+                        </div>
+
+                        <p>Pernah 1 ruangan yang sama dengan pasien COVID-19</p>
+                        <button class="boxed-btn3-text" id="a">Pernah</button>
+                        <button class="boxed-btn3-text" id="aTidak">Tidak Pernah</button>
+                    </div>
+                </div>
+                <div class="col-xl-12 col-md-12" id="soalB" style="display: none">
+                    <div class="single_service text-center">
+                        <div class="icon">
+                            <img src="https://ppc-19.pekanbaru.go.id/theme/img/svg_icon/b.svg" alt="">
+                        </div>
+
+                        <p>Pernah kontak dalam jarak 1 meter dengan pasien COVID-19</p>
+                        <button class="boxed-btn3-text" id="b">Pernah</button>
+                        <button class="boxed-btn3-text" id="bTidak">Tidak Pernah</button>
+                    </div>
+                </div>
+                <div class="col-xl-12 col-md-12" id="soalC" style="display: none">
+                    <div class="single_service text-center">
+                        <div class="icon">
+                            <img src="https://ppc-19.pekanbaru.go.id/theme/img/svg_icon/c.svg" alt="">
+                        </div>
+
+                        <p>Pernah berkunjung ke negara/daerah endemis COVID-19</p>
+                        <button class="boxed-btn3-text" id="c">Pernah</button>
+                        <button class="boxed-btn3-text" id="cTidak">Tidak Pernah</button>
+                    </div>
+                </div>
+                <div class="col-xl-12 col-md-12" id="soalD" style="display: none">
+                    <div class="single_service text-center">
+                        <div class="icon">
+                            <img src="https://ppc-19.pekanbaru.go.id/theme/img/svg_icon/d.svg" alt="">
+                        </div>
+
+                        <p>Demam > 38 C</p>
+                        <button class="boxed-btn3-text" id="d">Pernah</button>
+                        <button class="boxed-btn3-text" id="dTidak">Tidak Pernah</button>
+                    </div>
+                </div>
+                <div class="col-xl-12 col-md-12" id="soalE" style="display: none">
+                    <div class="single_service text-center">
+                        <div class="icon">
+                            <img src="https://ppc-19.pekanbaru.go.id/theme/img/svg_icon/e.svg" alt="">
+                        </div>
+
+                        <p>Batuk</p>
+                        <button class="boxed-btn3-text" id="e">Pernah</button>
+                        <button class="boxed-btn3-text" id="eTidak">Tidak Pernah</button>
+                    </div>
+                </div>
+                <div class="col-xl-12 col-md-12" id="soalF" style="display: none">
+                    <div class="single_service text-center">
+                        <div class="icon">
+                            <img src="https://ppc-19.pekanbaru.go.id/theme/img/svg_icon/f.svg" alt="">
+                        </div>
+
+                        <p>Pilek atau Flu</p>
+                        <button class="boxed-btn3-text" id="f">Pernah</button>
+                        <button class="boxed-btn3-text" id="fTidak">Tidak Pernah</button>
+                    </div>
+                </div>
+                <div class="col-xl-12 col-md-12" id="soalG" style="display: none">
+                    <div class="single_service text-center">
+                        <div class="icon">
+                            <img src="https://ppc-19.pekanbaru.go.id/theme/img/svg_icon/g.svg" alt="">
+                        </div>
+
+                        <p>Sesak Nafas</p>
+                        <button class="boxed-btn3-text" id="g">Pernah</button>
+                        <button class="boxed-btn3-text" id="gTidak">Tidak Pernah</button>
+                    </div>
+                </div>
+                <div class="col-xl-12 col-md-12" id="soalH" style="display: none">
+                    <div class="single_service text-center">
+                        <div class="icon">
+                            <img src="https://ppc-19.pekanbaru.go.id/theme/img/svg_icon/h.svg" alt="">
+                        </div>
+
+                        <p>Apakah setelah karantina Anda merasakan salah satu atau semua gejala berikut:<br>
+                            1. Demam > 38C<br>
+                            2. Batuk<br>
+                            3. Pilek<br>
+                            4. Sesak nafas</p>
+                        <button class="boxed-btn3-text" id="h">Pernah</button>
+                        <button class="boxed-btn3-text" id="hTidak">Tidak Pernah</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="karantina_div" style="display: none">
+                <div class="col-xl-12 col-md-12">
+                    <div class="single_service text-center">
+                        <div>
+                            <img src="https://ppc-19.pekanbaru.go.id/theme/img/ilstrator/karantina.svg" alt="" width="200"
+                                height="200">
+                        </div>
+
+                        <p>Apakah Anda sudah karantina diri selama 14 hari ?</p>
+                        <button href="" class="boxed-btn3-text" id="pert3ya">Ya</button>&nbsp;<button
+                            class="boxed-btn3-text" id="pert3tidak">Tidak</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="data_user" style="display:none">
+           
+            </div>
+            <div class="row" id="btn_cek" style="display: none">
+                
+                <div class="col-xl-2 col-md-2">
+
+                </div>
+                <div class="col-xl-8 col-md-8">
+                    <div class="row">
+                    <div class="col-md-3">
+                        Nama : <input type="text" class="form-control" name="nama" id="nama" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)">
+                    </div>
+                    <div class="col-md-3">
+                        Umur : <input type="number" class="form-control" name="umur" id="umur" >
+                    </div>
+                    <div class="col-md-6">
+                    Kelurahan Asal : 
+                    <select name="kelurahan" id="kelurahan" class="form-control select2" style="width:100%">
+            <option value="0">--Pilih Kelurahan--</option>
+                                   
+                        
+                        <option value="3">Agrowisata</option>
+                    
+                                        
+                        
+                        <option value="4">Air Dingin</option>
+                    
+                                        
+                        
+                        <option value="5">Air Hitam</option>
+                    
+                                        
+                        
+                        <option value="6">Air Putih</option>
+                    
+                                        
+                        
+                        <option value="7">Bambu Kuning</option>
+                    
+                                        
+                        
+                        <option value="8">Bandar Raya</option>
+                    
+                                        
+                        
+                        <option value="9">Bencah Lesung</option>
+                    
+                                        
+                        
+                        <option value="10">Bina Widya</option>
+                    
+                                        
+                        
+                        <option value="11">Cinta Raja</option>
+                    
+                                        
+                        
+                        <option value="12">Delima</option>
+                    
+                                        
+                        
+                        <option value="13">Harjosari</option>
+                    
+                                        
+                        
+                        <option value="14">Industri Tenayan</option>
+                    
+                                        
+                        
+                        <option value="15">Jadirejo</option>
+                    
+                                        
+                        
+                        <option value="16">Kampung Bandar</option>
+                    
+                                        
+                        
+                        <option value="17">Kampung Baru</option>
+                    
+                                        
+                        
+                        <option value="18">Kampung Dalam</option>
+                    
+                                        
+                        
+                        <option value="19">Kampung Melayu</option>
+                    
+                                        
+                        
+                        <option value="20">Kampung Tengah</option>
+                    
+                                        
+                        
+                        <option value="21">Kedungsari</option>
+                    
+                                        
+                        
+                        <option value="22">Kota Tinggi</option>
+                    
+                                        
+                        
+                        <option value="23">Kotabaru</option>
+                    
+                                        
+                        
+                        <option value="24">Kulim</option>
+                    
+                                        
+                        
+                        <option value="25">Labuh Baru Barat</option>
+                    
+                                        
+                        
+                        <option value="26">Labuh Baru Timur</option>
+                    
+                                        
+                        
+                        <option value="27">Lembah Damai</option>
+                    
+                                        
+                        
+                        <option value="28">Lembah Sari</option>
+                    
+                                        
+                        
+                        <option value="29">Limbungan</option>
+                    
+                                        
+                        
+                        <option value="30">Limbungan Baru</option>
+                    
+                                        
+                        
+                        <option value="31">Maharani</option>
+                    
+                                        
+                        
+                        <option value="32">Maharatu</option>
+                    
+                                        
+                        
+                        <option value="33">Melebung</option>
+                    
+                                        
+                        
+                        <option value="35">Mentangor</option>
+                    
+                                        
+                        
+                        <option value="34">Meranti Pandak</option>
+                    
+                                        
+                        
+                        <option value="36">Muara Fajar Barat</option>
+                    
+                                        
+                        
+                        <option value="37">Muara Fajar Timur</option>
+                    
+                                        
+                        
+                        <option value="38">Padang Bulan</option>
+                    
+                                        
+                        
+                        <option value="39">Padang Terubuk</option>
+                    
+                                        
+                        
+                        <option value="40">Palas</option>
+                    
+                                        
+                        
+                        <option value="41">Pebatuan</option>
+                    
+                                        
+                        
+                        <option value="42">Pematang Kapau</option>
+                    
+                                        
+                        
+                        <option value="43">Perhentian Marpoyan</option>
+                    
+                                        
+                        
+                        <option value="44">Pesisir</option>
+                    
+                                        
+                        
+                        <option value="45">Pulau Karam</option>
+                    
+                                        
+                        
+                        <option value="46">Rantau Panjang</option>
+                    
+                                        
+                        
+                        <option value="47">Rejosari</option>
+                    
+                                        
+                        
+                        <option value="48">Rintis</option>
+                    
+                                        
+                        
+                        <option value="49">Rumbai Bukit</option>
+                    
+                                        
+                        
+                        <option value="50">Sago</option>
+                    
+                                        
+                        
+                        <option value="51">Sekip</option>
+                    
+                                        
+                        
+                        <option value="52">Sialang Munggu</option>
+                    
+                                        
+                        
+                        <option value="53">Sialang Rampai</option>
+                    
+                                        
+                        
+                        <option value="54">Sialang Sakti</option>
+                    
+                                        
+                        
+                        <option value="55">Sidomulyo Barat</option>
+                    
+                                        
+                        
+                        <option value="56">Sidomulyo Timur</option>
+                    
+                                        
+                        
+                        <option value="57">Simpang Baru</option>
+                    
+                                        
+                        
+                        <option value="58">Simpang Empat</option>
+                    
+                                        
+                        
+                        <option value="59">Simpang Tiga</option>
+                    
+                                        
+                        
+                        <option value="60">Sri Meranti</option>
+                    
+                                        
+                        
+                        <option value="61">Sukajadi</option>
+                    
+                                        
+                        
+                        <option value="62">Sukamaju</option>
+                    
+                                        
+                        
+                        <option value="63">Sukamulia</option>
+                    
+                                        
+                        
+                        <option value="64">Sukaramai</option>
+                    
+                                        
+                        
+                        <option value="65">Sumahilang</option>
+                    
+                                        
+                        
+                        <option value="66">Sungai Ambang</option>
+                    
+                                        
+                        
+                        <option value="67">Sungai Sibam</option>
+                    
+                                        
+                        
+                        <option value="68">Sungai Ukai</option>
+                    
+                                        
+                        
+                        <option value="69">Tampan</option>
+                    
+                                        
+                        
+                        <option value="70">Tanah Datar</option>
+                    
+                                        
+                        
+                        <option value="71">Tangkerang Barat</option>
+                    
+                                        
+                        
+                        <option value="72">Tangkerang Labuai</option>
+                    
+                                        
+                        
+                        <option value="73">Tangkerang Selatan</option>
+                    
+                                        
+                        
+                        <option value="74">Tangkerang Tengah</option>
+                    
+                                        
+                        
+                        <option value="75">Tangkerang Timur</option>
+                    
+                                        
+                        
+                        <option value="76">Tangkerang Utara</option>
+                    
+                                        
+                        
+                        <option value="77">Tanjung Rhu</option>
+                    
+                                        
+                        
+                        <option value="78">Tebing Tinggi Okura</option>
+                    
+                                        
+                        
+                        <option value="79">Tirta Siak</option>
+                    
+                                        
+                        
+                        <option value="80">Tobek Godang</option>
+                    
+                                        
+                        
+                        <option value="81">Tuah Karya</option>
+                    
+                                        
+                        
+                        <option value="82">Tuah Madani</option>
+                    
+                                        
+                        
+                        <option value="83">Tuah Negeri</option>
+                    
+                                        
+                        
+                        <option value="84">Umban Sari</option>
+                    
+                                        
+                        
+                        <option value="85">Wonorejo</option>
+                    
+                                   </select>
+                    </div>
+                  
+                    </div>
+                    <div class="single_service text-center">
+                        <button class="boxed-btn3" id="cek">Lihat Hasil CheckUp</button>
+                        <a href="" class="boxed-btn3-text" id="cek">Coba Lagi</a href="">
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-2">
+
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+    <!--/ service_area  -->
+
+   
+
+    <!-- JS here -->
+    <script src="https://ppc-19.pekanbaru.go.id/theme/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="https://ppc-19.pekanbaru.go.id/theme/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="https://ppc-19.pekanbaru.go.id/theme/js/popper.min.js"></script>
+    <script src="https://ppc-19.pekanbaru.go.id/theme/js/bootstrap.min.js"></script>
+    <script src="https://ppc-19.pekanbaru.go.id/theme/js/owl.carousel.min.js"></script>
+    <script src="https://ppc-19.pekanbaru.go.id/theme/js/isotope.pkgd.min.js"></script>
+    <script src="https://ppc-19.pekanbaru.go.id/theme/js/ajax-form.js"></script>
+    <script src="https://ppc-19.pekanbaru.go.id/theme/js/waypoints.min.js"></script>
+    <script src="https://ppc-19.pekanbaru.go.id/theme/js/jquery.counterup.min.js"></script>
+    <script src="https://ppc-19.pekanbaru.go.id/theme/js/imagesloaded.pkgd.min.js"></script>
+    <script src="https://ppc-19.pekanbaru.go.id/theme/js/scrollIt.js"></script>
+    <script src="https://ppc-19.pekanbaru.go.id/theme/js/jquery.scrollUp.min.js"></script>
+    <script src="https://ppc-19.pekanbaru.go.id/theme/js/wow.min.js"></script>
+    <script src="https://ppc-19.pekanbaru.go.id/theme/js/nice-select.min.js"></script>
+    <script src="https://ppc-19.pekanbaru.go.id/theme/js/jquery.slicknav.min.js"></script>
+    <script src="https://ppc-19.pekanbaru.go.id/theme/js/jquery.magnific-popup.min.js"></script>
+    <script src="https://ppc-19.pekanbaru.go.id/theme/js/plugins.js"></script>
+    <script src="https://ppc-19.pekanbaru.go.id/theme/js/gijgo.min.js"></script>
+
+    <!--contact js-->
+    <script src="https://ppc-19.pekanbaru.go.id/theme/js/contact.js"></script>
+    <script src="https://ppc-19.pekanbaru.go.id/theme/js/jquery.ajaxchimp.min.js"></script>
+    <script src="https://ppc-19.pekanbaru.go.id/theme/js/jquery.form.js"></script>
+    <script src="https://ppc-19.pekanbaru.go.id/theme/js/jquery.validate.min.js"></script>
+    <script src="https://ppc-19.pekanbaru.go.id/theme/js/mail-script.js"></script>
+    <script src="https://ppc-19.pekanbaru.go.id/theme/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+    <script>
+    $('.select2').select2();
+    var guA = "";
+    var guB = "";
+    var guC = "";
+    $('#a').click(function() {
+        guA = "ok";
+        $("#soalA").css("display", "none");
+        $("#soalB").css("display", "");
+    });
+    $('#aTidak').click(function() {
+        $("#soalA").css("display", "none");
+        $("#soalB").css("display", "");
+    });
+    $('#b').click(function() {
+        guB = "ok";
+        $("#soalB").css("display", "none");
+        $("#soalC").css("display", "");
+    });
+    $('#bTidak').click(function() {
+        $("#soalB").css("display", "none");
+        $("#soalC").css("display", "");
+    });
+    $('#c').click(function() {
+        guC = "ok";
+        $("#soalC").css("display", "none");
+        $("#soalD").css("display", "");
+    });
+    $('#cTidak').click(function() {
+        $("#soalC").css("display", "none");
+        $("#soalD").css("display", "");
+    });
+    var guD = "";
+    var guE = "";
+    var guF = "";
+    var guG = "";
+    var guH = "";
+    $('#d').click(function() {
+        guD = "ok";
+        $("#soalD").css("display", "none");
+        $("#soalE").css("display", "");
+    });
+    $('#dTidak').click(function() {
+        $("#soalD").css("display", "none");
+        $("#soalE").css("display", "");
+    });
+    $('#e').click(function() {
+        guE = "ok";
+        $("#soalE").css("display", "none");
+        $("#soalF").css("display", "");
+    });
+    $('#eTidak').click(function() {
+        $("#soalE").css("display", "none");
+        $("#soalF").css("display", "");
+    });
+    $('#f').click(function() {
+        guF = "ok";
+        $("#soalF").css("display", "none");
+        $("#soalG").css("display", "");
+    });
+    $('#fTidak').click(function() {
+        $("#soalF").css("display", "none");
+        $("#soalG").css("display", "");
+    });
+    $('#g').click(function() {
+        $("#soalG").css("display", "none");
+        guG = "ok";
+        var gu = guA + guB + guC;
+        var gt = guD + guE + guF + guG;
+        var valSubgt = sub_gt;
+        if (gu && !gt) {
+            $("#judul_awal").css("display", "none");
+            $("#karantina_div").css("display", "");
+        } else {
+            $("#judul_awal").css("display", "none");
+            $("#btn_cek").css("display", "");
+            $("#data_user").css("display", "");
+        }
+    });
+    $('#gTidak').click(function() {
+        $("#soalG").css("display", "none");
+        var gu = guA + guB + guC;
+        var gt = guD + guE + guF + guG;
+        var valSubgt = sub_gt;
+        if (gu && !gt) {
+            $("#judul_awal").css("display", "none");
+            $("#karantina_div").css("display", "");
+        } else {
+            $("#judul_awal").css("display", "none");
+            $("#btn_cek").css("display", "");
+            $("#data_user").css("display", "");
+        }
+    });
+    $('#h').click(function() {
+        guH = "ok";
+        $("#soalH").css("display", "none");
+        $("#btn_cek").css("display", "");
+        $("#data_user").css("display", "");
+    });
+    $('#hTidak').click(function() {
+        $("#soalH").css("display", "none");
+        $("#btn_cek").css("display", "");
+        $("#data_user").css("display", "");
+    });
+    var sub_gt = "";
+    $('#pert3ya').click(function() {
+
+
+        sub_gt = "Ya";
+
+        $("#karantina_div").css("display", "none");
+        $("#soalH").css("display", "");
+
+    });
+    $('#pert3tidak').click(function() {
+
+        sub_gt = "Tidak";
+
+        $("#karantina_div").css("display", "none");
+        $("#btn_cek").css("display", "");
+        $("#data_user").css("display", "");
+
+    });
+
+    $('#cek').click(function() {
+        var gu = guA + guB + guC;
+        var gt = guD + guE + guF + guG;
+        var valSubgt = sub_gt;
+        if (gu && !gt) {
+            $(".compapy_info").css("display", "");
+        } else {
+            $("#btn_cek").css("display", "");
+            $("#data_user").css("display", "");
+        }
+    });
+    $('#cek').click(function() {
+        var umur = $('#umur').val();
+        var nama = $('#nama').val();
+        var kelurahan = $('#kelurahan').val();
+        if(umur&&nama&&kelurahan){
+            var gu = guA + guB + guC;
+        var gt = guD + guE + guF + guG;
+        var valSubgt = sub_gt;
+        if (gu && gt) {
+            Swal.fire({
+                imageUrl: 'https://ppc-19.pekanbaru.go.id/theme/img/svg_icon/j.svg',
+                imageHeight: 150,
+                title: 'Perhatian',
+                text: 'Gejala-gejala ini membutuhkan perhatian. Segera Hub 119 ext 9 atau periksakan diri ke RS rujukan covid-19.!',
+            });
+            $.ajax({
+           type: "GET",
+           url: "https://ppc-19.pekanbaru.go.id/halaman/kirim",
+           data: {nama:nama,umur:umur,kelurahan:kelurahan,jawaban:'S1'}, // changed
+           success: function(data) {
+               console.log(data);
+           }
+    });
+        } else if (gu && !gt) {
+            if (valSubgt == "Tidak") {
+                Swal.fire({
+                    imageUrl: 'https://ppc-19.pekanbaru.go.id/theme/img/svg_icon/i.svg',
+                    imageHeight: 150,
+                    title: 'Perhatian',
+                    text: 'Karantina diri Anda selama 14 hari terhitung setelah kontak/kunjungan/gejala muncul.',
+                });
+                $.ajax({
+           type: "GET",
+           url: "https://ppc-19.pekanbaru.go.id/halaman/kirim",
+           data: {nama:nama,umur:umur,kelurahan:kelurahan,jawaban:'S2'}, // changed
+           success: function(data) {
+               console.log(data);
+           }
+    });
+            } else if (valSubgt == "Ya") {
+                if (guH == "ok") {
+                    Swal.fire({
+                        imageUrl: 'https://ppc-19.pekanbaru.go.id/theme/img/svg_icon/j.svg',
+                        imageHeight: 150,
+                        title: 'Perhatian',
+                        text: 'Gejala-gejala ini membutuhkan perhatian. Segera Hub 119 ext 9 atau periksakan diri ke RS rujukan covid-19.!',
+                    });
+                    $.ajax({
+           type: "GET",
+           url: "https://ppc-19.pekanbaru.go.id/halaman/kirim",
+           data: {nama:nama,umur:umur,kelurahan:kelurahan,jawaban:'S1'}, // changed
+           success: function(data) {
+               console.log(data);
+           }
+    });
+                } else {
+                    Swal.fire({
+                        imageUrl: 'https://ppc-19.pekanbaru.go.id/theme/img/svg_icon/k.svg',
+                        imageHeight: 150,
+                        title: 'Perhatian',
+                        text: 'Anda kemungkinan besar tidak terinfeksi oleh COVID-19, Namun anda disarankan untuk tetap tinggal dirumah. Infeksi anda mungkin disebabkan virus selain COVID-19, Oleh karena itu anda tidak perlu dites oleh COVID-19. Meskipun demikian, hindarilah keluar rumah jika memungkinkan. Penyakit anda akan sembuh sendiri dengan cukup makan dan istirahat. Apabila anda mengalami gejala atau mendapatkan informasi baru tentang perjalanan penyakit anda, anda bisa membuka web ini lagi.',
+                    });
+                    $.ajax({
+           type: "GET",
+           url: "https://ppc-19.pekanbaru.go.id/halaman/kirim",
+           data: {nama:nama,umur:umur,kelurahan:kelurahan,jawaban:'S4'}, // changed
+           success: function(data) {
+               console.log(data);
+           }
+    });
+                }
+
+            }
+        } else if (!gu && gt == "okokokok") {
+            Swal.fire({
+                imageUrl: 'https://ppc-19.pekanbaru.go.id/theme/img/svg_icon/i.svg',
+                imageHeight: 150,
+                title: 'Perhatian',
+                text: 'Karantina diri Anda selama 14 hari terhitung setelah kontak/kunjungan/gejala muncul.',
+            });
+            $.ajax({
+           type: "GET",
+           url: "https://ppc-19.pekanbaru.go.id/halaman/kirim",
+           data: {nama:nama,umur:umur,kelurahan:kelurahan,jawaban:'S2'}, // changed
+           success: function(data) {
+               console.log(data);
+           }
+    });
+        } else if (!gu && gt) {
+            Swal.fire({
+                imageUrl: 'https://ppc-19.pekanbaru.go.id/theme/img/svg_icon/h.svg',
+                imageHeight: 150,
+                title: 'Perhatian',
+                text: 'Istirahat yang cukup, periksakan diri ke dokter terdekat jika sakit berlanjut.',
+            });
+            $.ajax({
+           type: "GET",
+           url: "https://ppc-19.pekanbaru.go.id/halaman/kirim",
+           data: {nama:nama,umur:umur,kelurahan:kelurahan,jawaban:'S3'}, // changed
+           success: function(data) {
+               console.log(data);
+           }
+    });
+            
+        } else {
+            Swal.fire({
+                imageUrl: 'https://ppc-19.pekanbaru.go.id/theme/img/svg_icon/k.svg',
+                imageHeight: 150,
+                title: 'Perhatian',
+                text: 'Anda kemungkinan besar tidak terinfeksi oleh COVID-19, Namun anda disarankan untuk tetap tinggal dirumah. Infeksi anda mungkin disebabkan virus selain COVID-19, Oleh karena itu anda tidak perlu dites oleh COVID-19. Meskipun demikian, hindarilah keluar rumah jika memungkinkan. Penyakit anda akan sembuh sendiri dengan cukup makan dan istirahat. Apabila anda mengalami gejala atau mendapatkan informasi baru tentang perjalanan penyakit anda, anda bisa membuka web ini lagi.',
+            });
+            $.ajax({
+           type: "GET",
+           url: "https://ppc-19.pekanbaru.go.id/halaman/kirim",
+           data: {nama:nama,umur:umur,kelurahan:kelurahan,jawaban:'S4'}, // changed
+           success: function(data) {
+               console.log(data);
+           }
+    });
+        }
+        }else{
+            Swal.fire({
+                title: 'Maaf!',
+                                text: 'Mohon Maaf Sebelum Melihat Hasil Checkup Mohon Isi Nama, Umur dan Keleruahan sesuai dengan Identitas Anda. Terimakasih',
+                                type: 'danger'
+});
+        }
+        
+    });
+    </script>
+    <script>
+    document.onkeydown = function(e) {
+            if (e.ctrlKey && 
+                (e.keyCode === 67 || 
+                 e.keyCode === 86 || 
+                 e.keyCode === 85 || 
+                 e.keyCode === 117)) {
+                return false;
+            } else {
+                return true;
+            }
+    };
+    $(document).keypress("u",function(e) {
+      if(e.ctrlKey)
+      {
+    return false;
+    }
+    else
+    {
+    return true;
+    }
+    });
+    </script>
+
+</body>
+
+</html>
