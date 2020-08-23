@@ -414,8 +414,7 @@
     $('#cek').click(function() {
         var umur = $('#umur').val();
         var nama = $('#nama').val();
-        var kelurahan = $('#kelurahan').val();
-        if(umur&&nama&&kelurahan){
+        if(umur&&nama){
             var gu = guA + guB + guC;
         var gt = guD + guE + guF + guG;
         var valSubgt = sub_gt;
@@ -429,7 +428,7 @@
             $.ajax({
            type: "GET",
            url: "https://ppc-19.pekanbaru.go.id/halaman/kirim",
-           data: {nama:nama,umur:umur,kelurahan:kelurahan,jawaban:'S1'}, // changed
+           data: {nama:nama,umur:umur,jawaban:'S1'}, // changed
            success: function(data) {
                console.log(data);
            }
@@ -445,7 +444,7 @@
                 $.ajax({
            type: "GET",
            url: "https://ppc-19.pekanbaru.go.id/halaman/kirim",
-           data: {nama:nama,umur:umur,kelurahan:kelurahan,jawaban:'S2'}, // changed
+           data: {nama:nama,umur:umur,jawaban:'S2'}, // changed
            success: function(data) {
                console.log(data);
            }
@@ -461,7 +460,7 @@
                     $.ajax({
            type: "GET",
            url: "https://ppc-19.pekanbaru.go.id/halaman/kirim",
-           data: {nama:nama,umur:umur,kelurahan:kelurahan,jawaban:'S1'}, // changed
+           data: {nama:nama,umur:umur,jawaban:'S1'}, // changed
            success: function(data) {
                console.log(data);
            }
@@ -476,7 +475,7 @@
                     $.ajax({
            type: "GET",
            url: "https://ppc-19.pekanbaru.go.id/halaman/kirim",
-           data: {nama:nama,umur:umur,kelurahan:kelurahan,jawaban:'S4'}, // changed
+           data: {nama:nama,umur:umur,jawaban:'S4'}, // changed
            success: function(data) {
                console.log(data);
            }
@@ -494,7 +493,7 @@
             $.ajax({
            type: "GET",
            url: "https://ppc-19.pekanbaru.go.id/halaman/kirim",
-           data: {nama:nama,umur:umur,kelurahan:kelurahan,jawaban:'S2'}, // changed
+           data: {nama:nama,umur:umur,jawaban:'S2'}, // changed
            success: function(data) {
                console.log(data);
            }
@@ -509,7 +508,7 @@
             $.ajax({
            type: "GET",
            url: "https://ppc-19.pekanbaru.go.id/halaman/kirim",
-           data: {nama:nama,umur:umur,kelurahan:kelurahan,jawaban:'S3'}, // changed
+           data: {nama:nama,umur:umur,jawaban:'S3'}, // changed
            success: function(data) {
                console.log(data);
            }
@@ -525,7 +524,7 @@
             $.ajax({
            type: "GET",
            url: "https://ppc-19.pekanbaru.go.id/halaman/kirim",
-           data: {nama:nama,umur:umur,kelurahan:kelurahan,jawaban:'S4'}, // changed
+           data: {nama:nama,umur:umur,jawaban:'S4'}, // changed
            success: function(data) {
                console.log(data);
            }
